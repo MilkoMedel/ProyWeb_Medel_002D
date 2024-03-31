@@ -5,93 +5,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Almacen el pollito</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <thead>
-        <div class="container">
-            <nav>
-                <img src="img/imagenlogo.png" alt="Logotipo">
-                <label class="logo">El polito</label>
+    <header class="header">
+        <div class="menu container">
+            <input type="checkbox" id="menu">
+            <img class="menu-icono"" src="img/imagenlogo.png" alt="menu logo">
+            <nav class="navbar">
                 <ul>
-                    <li><a class="active" href="Index.html">Inicio</a></li>
-                    <li><a class="active" href="Nosotros.html">Nosotros</a></li>
-                    <li><a class="active" href="Galeria.html">Galeria</a></li>
+                    <li><a href="Index.html">Inicio</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                    <li><a href="Galeria.html">Galeria</a></li>
                 </ul>
             </nav>
-        </div> 
-    </thead>
-    <tbody>
-        <br>
-        <div class="conteiner-items">
-            <div class="item">
-                <figure>
-                    <img src="img/imagenhbg100.webp" alt="producto">
-                </figure>
-                <div class="info-product">
-                    <h2>Hamburguesa 100gr</h2>
-                    <p class="price">
-                        $ 950
-                    </p>
-                    <button>Añadir al carrito</button>
+        </div>
+        <div class="header-content container">
+            <h1>El polito</h1>
+        </div>
+    </header>
+    <section class="producto">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" 
+                data-bs-target="#carouselExampleIndicators" 
+                data-bs-slide-to="0" 
+                class="active" 
+                aria-current="true" 
+                aria-label="Slide 1"></button>
+                <button type="button" 
+                data-bs-target="#carouselExampleIndicators" 
+                data-bs-slide-to="1" 
+                aria-label="Slide 2"></button>
+                <button type="button" 
+                data-bs-target="#carouselExampleIndicators" 
+                data-bs-slide-to="2" 
+                aria-label="Slide 3"></button>
+                <button type="button" 
+                data-bs-target="#carouselExampleIndicators" 
+                data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+                <button type="button" 
+                data-bs-target="#carouselExampleIndicators" 
+                data-bs-slide-to="4" 
+                aria-label="Slide 5"></button>
+                <button type="button" 
+                data-bs-target="#carouselExampleIndicators" 
+                data-bs-slide-to="5" 
+                aria-label="Slide 6"></button>
+                
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/imagenSP15.webp" class="d-block w-100" alt="sprite">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/imagenwatts300.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/imagenchapsue500.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/imagenhbg100.webp" class="d-block w-100" alt="sprite">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/imagenhbg150.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/imagenmnt473.png" class="d-block w-100" alt="...">
                 </div>
             </div>
-            <div class="item">
-                <figure>
-                    <img src="img/imagenhbg150.webp" alt="producto">
-                </figure>
-                <div class="info-product">
-                    <h2>Hamburguesa 150gr</h2>
-                    <p class="price">
-                        $ 1450
-                    </p>
-                    <button>Añadir al carrito</button>
-                </div>
-            </div>
-            <div class="item">
-                <figure>
-                    <img src="img/imagenchapsue500.webp" alt="producto">
-                </figure>
-                <div class="info-product">
-                    <h2>Chap sui 500gr</h2>
-                    <p class="price">
-                        $ 1300
-                    </p>
-                    <button>Añadir al carrito</button>
-                </div>
-            </div>
-            <div class="item">
-                <figure>
-                    <img src="img/imagenlata350.png" alt="producto">
-                </figure>
-                <div class="info-product">
-                    <h2>Cocacola 300cc</h2>
-                    <p class="price">
-                        $ 1000s
-                    </p>
-                    <button>Añadir al carrito</button>
-                </div>
-            </div>
-            <div class="item">
-                <figure>
-                    <img src="img/imagenlaysCE134.webp" alt="producto">
-                </figure>
-                <div class="info-product">
-                    <h2>Papas fritas Lays Crema Cebolla 134gr</h2>
-                    <p class="price">
-                        $ 2300
-                    </p>
-                    <button>Añadir al carrito</button>
-                </div>
+            <button class="carousel-control-prev" 
+            type="button" 
+            data-bs-target="#carouselExampleIndicators" 
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" 
+            type="button" 
+            data-bs-target="#carouselExampleIndicators" 
+            data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section class="coffee">
+        <img class="coffee-img" src="images/bg2.png" alt="">
+        <div class="coffee-content container">
+            <div class="coffee-1">
+                <h3>Nuestra Historia</h3>
+                <ul>
+                    <p>En nuestro almacén de abarrotes y congelados, ofrecemos una amplia gama de productos frescos y de alta calidad para satisfacer las necesidades de nuestros clientes. Desde frutas y verduras hasta carnes y pescados congelados, nuestro objetivo es proporcionar productos frescos y convenientes para facilitar la vida diaria de nuestros clientes. Con un enfoque en la frescura, la variedad y el servicio al cliente excepcional, nos esforzamos por ser el destino preferido para las compras de abarrotes y congelados de calidad.</p>
+                    <li><a href="Nosotros.html" class="btn-1">Informacion</a></li>
+                </ul>
             </div>
         </div>
-    </tbody>
+    </section>
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Galeria</h3>
+                <ul>
+                    <p>Ve nuestras fotos sobre nuestros productos.</p>
+                    <li><a href="Galeria.html" class="btn-1">Informacion</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>lorem</h3>
+                <ul>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>lorem</h3>
+                <ul>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
-<footer class="footer bg-dark">
-    <div class="&copy" align="center">
-        <p>
-            &copy;Todos los derechos reservados 2024
-        </p>
-    </div>
-</footer>
 </html>

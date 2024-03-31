@@ -1,114 +1,241 @@
-* {
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
+    width: auto;
+    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    width: auto;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
-body, html {
-    font-family: 'Lato', sans-serif;
-    color: #333;
-    min-width: 700px;
-    min-height: 400px;
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.container img {
-    width: 100px;
-    height: 100px;
-    padding: 10px;
+.header{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url(https://images.prismic.io/simpliroute/85eca361-d606-4cb9-9bb3-0bc359e09961_planograma+de+abarrotes.jpg?auto=compress%2Cformat&rect=0%2C121%2C1920%2C836&w=1920&fit=max&q=100);
+    background-position: center bottom;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: #ffFdfc;
+    font-size: 25px;
+}
+
+.menu .navbar ul li{
+    position: relative;
     float: left;
 }
 
-.container nav {
-    background: #0082e6;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center; /* Centrar verticalmente los elementos */
+.menu .navbar ul li a{
+    font-size: 10px;
+    padding: 20px;
+    color: #ffFdfc;
+    display: block;
 }
 
-.container label.logo {
-    color: white;
-    font-size: 35px;
-    font-weight: bold;
-    padding: 0 20px; /* Espaciado horizontal */
+.menu .navbar ul li a:hover{    
+    color: #ce967b;
 }
 
-.container ul {
-    margin-left: auto; /* Mover el menú a la derecha */
-    padding-right: 20px;
+#menu{
+    display: none;
 }
 
-.container ul li {
+.menu-icono{
+    width: 100px;
+    padding: 20px 20px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.header-content h1{
+    font-size: 75px;
+    line-height: 80px;
+    color: #f9fafc;
+    margin-bottom: 35px;
+}
+
+.header-content p{
+    font-size: 16px;
+    color: #c5cbc5;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+.btn-1{
     display: inline-block;
-    margin: 0 5px;
-    line-height: 80px; /* Centrar verticalmente los enlaces */
-}
-
-.container ul li a {
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
+    padding: 11px 35px;
+    background-color: #ce967b;
+    color: #f9fafc;
     text-transform: uppercase;
 }
 
-.container a.active,
-.container a:hover {
-    background: #1b9bff;
-    transition: .5s;
+.btn-1:hover{
+    background-color: #ebad8d; 
 }
 
-.titulo{
-    font-family: 'sans-serif';
-    font-size: 40px;
-    padding: 50px;
+.conteiner-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    overflow-wrap: initial;
+    
 }
 
-.slider-box{
-    width: 1280px;
-    height: auto;
-    margin: 50px 0px;
+.item {
+    border-radius: 20%;
+}
+
+.item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
+}
+
+.info-product {
+    padding: 15px 30px;
+    border-radius: 50%;
+    line-height: 1;
+    display: flex;
+    flex-direction: column; /* Corregir la dirección de la columna */
+    justify-content: space-between;
+    align-items: center; /* Centrar horizontalmente */
+    gap: 10px;
+}
+
+.item img {
+    aspect-ratio: 1/1;
+    height: 300px;
+    padding: 40px;
+    border-radius: 50px 50px 50px 50px;
+    transition: all .6s;
+    object-fit: cover;
+}
+
+.item figure {
     overflow: hidden;
 }
 
-.slider-box ul{
+.item:hover img {
+    transform: scale(1.2);
+}
+
+.price {
+    font-size: none;
+    font-weight: 900;
+}
+
+.info-product button {
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 15px;
+    margin: 20% ;
+}
+
+.galery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.galery,
+body{
+    background-color: #fefedc;
+}
+
+.card {
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 15px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-container {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.card:hover .card-container {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
     display: flex;
-    padding: 0px;
-    width: 400%;
-    animation:  slide 20s infinite alternate ease-in-out;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
-.slider-box li{
-    width: 100%;
-    list-style: none;
-    position: relative;
+.back-face {
+    transform: rotateY(180deg); /* Asegura que la parte trasera esté girada desde el principio */
+    display: none; /* Oculta la parte trasera por defecto */
+}   
+
+.card:hover .back-face {
+    display: flex; /* Muestra la parte trasera al hacer hover */
 }
 
-.slider-box img{
-    width: 100%;
+.footer{
+    background-color: #2a2a2a;
+    color: #fff;
 }
 
-@keyframes slide {
-    0%{margin-left: 0;}
-    30%{margin-left: 0;}
-
-    35%{margin-left: -100%;}
-    40%{margin-left: -100%;}
-
-    50%{margin-left: -200%;}
-    70%{margin-left: -200%;}
-
-    80%{margin-left: -300%;}
-    100%{margin-left: -300%;}
-}
-
-@media (max-width: 991px){
-    body .slider-box{
-        padding:30px;
-    }
-    .slider-box{
-        width: 100%;
-    }
+.footer h3{
+    color: #FFE333;
 }

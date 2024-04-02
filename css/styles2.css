@@ -7,18 +7,13 @@
     list-style: none;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    width: auto;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+body,html{
+    background-color: #AFEEEE;
 }
 
 .container{
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 3200px;
+    margin:auto;
 }
 
 .header{
@@ -34,8 +29,8 @@
     align-items: center;
 }
 
-.menu{
-    position: absolute;
+.menu {
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -44,37 +39,39 @@
     justify-content: space-between;
 }
 
-.logo{
-    color: #ffFdfc;
-    font-size: 25px;
+.menu-logo {
+    width: 80px;
 }
 
-.menu .navbar ul li{
+.menu .navbar ul li {
     position: relative;
     float: left;
+    text-transform: uppercase;
 }
 
-.menu .navbar ul li a{
+.menu .navbar ul li a {
     font-size: 10px;
     padding: 20px;
     color: #ffFdfc;
     display: block;
+    text-decoration: none;
+    font-size: 15px;
 }
 
-.menu .navbar ul li a:hover{    
+.menu .navbar ul li a:hover {
     color: #ce967b;
 }
 
-#menu{
+#menu {
     display: none;
 }
 
-.menu-icono{
-    width: 100px;
-    padding: 20px 20px;
+.menu-icono {
+    width: 50px;
+    padding: 0 10px;
 }
 
-.menu label{
+.menu label {
     cursor: pointer;
     display: none;
 }
@@ -115,7 +112,6 @@
     flex-wrap: wrap;
     gap: 8px;
     overflow-wrap: initial;
-    
 }
 
 .item {
@@ -169,13 +165,10 @@
 }
 
 .galery{
+    max-width: 3200px;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
-
-.galery,
-body{
-    background-color: #fefedc;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
 }
 
 .card {
@@ -189,9 +182,8 @@ body{
 }
 
 .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
 }
 
 .card-container {
@@ -201,13 +193,28 @@ body{
     transition: transform 0.5s;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 20px;
+    text-align: center;
 }
 
-.card:hover .card-container {
+.card .card-container.is-flipped{
     transform: rotateY(180deg);
 }
 
-.front-face,
+.front-face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+    transform: rotateY(0deg);
+}
+
 .back-face {
     width: 100%;
     height: 100%;
@@ -220,22 +227,59 @@ body{
     border-radius: 20px;
     background: #fff;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+    transform: rotateY(180deg);
 }
 
-.back-face {
-    transform: rotateY(180deg); /* Asegura que la parte trasera esté girada desde el principio */
-    display: none; /* Oculta la parte trasera por defecto */
-}   
-
-.card:hover .back-face {
-    display: flex; /* Muestra la parte trasera al hacer hover */
-}
-
-.footer{
+.footer {
+    padding: 15px 0;
     background-color: #2a2a2a;
     color: #fff;
 }
 
-.footer h3{
+.container-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer h3 {
+    font-size: 13px;
     color: #FFE333;
+    margin-bottom:15px;
+
+}
+
+@media (max-width: 800px){
+    .menu{
+        padding: initial;
+    }
+    .menu label{
+        display: initial;
+    }
+    .menu .navbar{
+        position: absolute; 
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+        z-index: 1000; /* Ajuste del z-index para que esté encima del slider */
+    }
+    .menu .navbar ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .navbar {
+        display: initial;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .header {
+        min-height: 0vh;
+    }
+    .header-content {
+        padding: 100px 30px;
+    }
+    .header-content p {
+        padding: 0;
+    }
+    
 }

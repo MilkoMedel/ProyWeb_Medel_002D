@@ -101,6 +101,7 @@ body,html{
     background-color: #ce967b;
     color: #f9fafc;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .btn-1:hover{
@@ -176,8 +177,6 @@ body,html{
     width: 300px;
     height: 400px;
     perspective: 1000px;
-    cursor: pointer;
-    overflow: hidden;
     box-shadow: 0 15px 15px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -242,7 +241,7 @@ body,html{
 }
 
 .footer h3 {
-    font-size: 13px;
+    font-size: 20px;
     color: #FFE333;
     margin-bottom:15px;
 
@@ -282,4 +281,9 @@ body,html{
         padding: 0;
     }
     
+    .galery{
+        display: flexbox;
+        justify-items: center;
+        
+    }
 }

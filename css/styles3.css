@@ -75,7 +75,51 @@ body, html{
     display: none;
 }
 
-.footer {
+.card {
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    width: 100%; /* Ajusta el ancho de la tarjeta */
+    max-width: 600px; /* Establece un ancho máximo para la tarjeta */
+    margin: 30px auto; /* Centra la tarjeta y añade un margen superior e inferior */
+    background-color: #ffa07a; 
+    color: #323337;
+    padding: 20px; /* Añade un espacio interno a la tarjeta */
+}
+
+.card-v {
+    width: 516px; /* Ancho de la carta */
+    height: 300px; /* Alto de la carta */
+    margin: 30px; /*division de cada card en 30px*/
+    object-fit: cover;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit);
+    gap: 20px; /* Espacio entre las cartas */
+    justify-items: center; /* Alinea el contenido en el centro horizontalmente */
+    text-align: center;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #ce967b;
+    color: #f9fafc;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn-1:hover{
+    background-color: #ebad8d; 
+}
+
+.footer{
     padding: 15px 0;
     background-color: #2a2a2a;
     color: #fff;
@@ -84,10 +128,11 @@ body, html{
 .container-content{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .footer h3 {
-    font-size: 13px;
+    font-size: 20px;
     color: #FFE333;
     margin-bottom:15px;
 
@@ -126,8 +171,27 @@ body, html{
     .header-content p {
         padding: 0;
     }
-    .producto{
-        padding: 100px 0;
-        position: relative;
+    .card-container{
+        max-width: auto;
+        max-height: auto;
     }
+    .card{
+        width: 300px;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-v{
+        max-width: 300px;
+        max-height: 250px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer {
+        max-width: auto;
+        max-height: auto;
+    }
+
 }

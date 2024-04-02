@@ -95,6 +95,7 @@ body, html{
     background-color: #ce967b;
     color: #f9fafc;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .btn-1:hover {
@@ -113,7 +114,7 @@ body, html{
 }
 
 .footer h3 {
-    font-size: 13px;
+    font-size: 20px;
     color: #FFE333;
     margin-bottom:15px;
 
@@ -153,7 +154,9 @@ body, html{
         padding: 0;
     }
     .producto{
-        padding: 100px 0;
-        position: relative;
+        display: flexbox;
+        justify-items: center;
+        max-width: 70%;
+        max-height: 20%;
     }
 }

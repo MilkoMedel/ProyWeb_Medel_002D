@@ -10,8 +10,11 @@
 <body>
     <header class="header">
         <div class="menu container">
+            <img class="menu-logo" src="img/imagenlogo.png" alt="menu logo">
             <input type="checkbox" id="menu">
-            <img class="menu-icono"" src="img/imagenlogo.png" alt="menu logo">
+            <label for="menu">
+                <img src="img/menu.png" class="menu-icono" alt="">
+            </label>
             <nav class="navbar">
                 <ul>
                     <li><a href="Index.html">Inicio</a></li>
@@ -20,15 +23,12 @@
                 </ul>
             </nav>
         </div>
-        <div class="header-content container">
-            <h1>El polito</h1>
-        </div>
     </header>
     <div>
         <h1 class="titulo" align="center">Galería de fotos</h1>
     </div>
     <section class="galery container">
-        <div class="card">    
+        <div class="card" onclick="voltear(this)">    
             <div class="card-container">
                 <div class="card-face front-face">
                     <img src="img/imagenchapsue500.webp" alt="">
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div> 
-        <div class="card">
+        <div class="card" onclick="voltear(this)">
             <div class="card-container">
                 <div class="card-face front-face">
                     <img src="img/imagenhbg100.webp" alt="">
@@ -57,7 +57,7 @@
             </div>
         </div> 
             
-        <div class="card">
+        <div class="card" onclick="voltear(this)">
             <div class="card-container">
                 <div class="card-face front-face">
                     <img src="img/imagenhbg150.webp" alt="">
@@ -72,7 +72,7 @@
             </div>
         </div> 
             
-        <div class="card">
+        <div class="card" onclick="voltear(this)">
             <div class="card-container">
                 <div class="card-face front-face">
                     <img src="img/imagenlata350.png" alt="">
@@ -87,7 +87,7 @@
             </div>
         </div> 
             
-        <div class="card">
+        <div class="card" onclick="voltear(this)">
             <div class="card-container">
                 <div class="card-face front-face">
                     <img src="img/imagenlaysCE134.webp" alt="">
@@ -102,7 +102,7 @@
             </div>
         </div> 
             
-        <div class="card">
+        <div class="card" onclick="voltear(this)">
             <div class="card-container">
                 <div class="card-face front-face">
                     <img src="img/imagenmnt473.png" alt="">
@@ -117,7 +117,7 @@
             </div>
         </div> 
             
-        <div class="card">
+        <div class="card" onclick="voltear(this)">
             <div class="card-container">
                 <div class="card-face front-face">
                     <img src="img/imagenpapas5k.jpeg" alt="">
@@ -132,7 +132,7 @@
             </div>
         </div> 
             
-        <div class="card">
+        <div class="card" onclick="voltear(this)">
             <div class="card-container">
                 <div class="card-face front-face">
                     <img src="img/imagenSP15.webp" alt="">
@@ -147,7 +147,7 @@
             </div>
         </div> 
             
-        <div class="card">
+        <div class="card" onclick="voltear(this)">
             <div class="card-container">
                 <div class="card-face front-face">
                     <img src="img/imagenwatts300.webp" alt="">
@@ -163,40 +163,36 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="footer-content container">
-            <div class="link">
-                <h3>Nuestra Historia</h3>
-                <ul>
-                    <p>En nuestro almacén de abarrotes y congelados, ofrecemos una amplia gama de productos frescos y de alta calidad para satisfacer las necesidades de nuestros clientes. Desde frutas y verduras hasta carnes y pescados congelados, nuestro objetivo es proporcionar productos frescos y convenientes para facilitar la vida diaria de nuestros clientes. Con un enfoque en la frescura, la variedad y el servicio al cliente excepcional, nos esforzamos por ser el destino preferido para las compras de abarrotes y congelados de calidad.</p>
-                    <li><a href="Nosotros.html" class="btn-1">Informacion</a></li>
-                </ul>
+        <section class="container-content">
+            <div class="content-pharagraph">
+                <div class="nosotros">
+                    <h3>Nuestra Historia</h3>
+                    <ul>
+                        <p>En nuestro almacén de abarrotes y congelados, ofrecemos una amplia gama de productos frescos y de alta calidad para satisfacer las necesidades de nuestros clientes. Desde frutas y verduras hasta carnes y pescados congelados, nuestro objetivo es proporcionar productos frescos y convenientes para facilitar la vida diaria de nuestros clientes.</p>
+                        <p>Con un enfoque en la frescura, la variedad y el servicio al cliente excepcional, nos esforzamos por ser el destino preferido para las compras de abarrotes y congelados de calidad.</p>
+                        <li><a href="Nosotros.html" class="btn-1">Informacion</a></li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3>Galeria</h3>
+                    <ul>
+                        <p>Ve nuestras fotos sobre nuestros productos.</p>
+                        <li><a href="Galeria.html" class="btn-1">Informacion</a></li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3>002D Milko Medel</h3>
+                    <ul>
+                        <li><p>&copy;Copyrigth Derechos reservados.</p></li>
+                    </ul>
+                </div>
             </div>
-            <div class="link">
-                <h3>Galeria</h3>
-                <ul>
-                    <p>Ve nuestras fotos sobre nuestros productos.</p>
-                    <li><a href="Galeria.html" class="btn-1">Informacion</a></li>
-                </ul>
-            </div>
-            <div class="link">
-                <h3>lorem</h3>
-                <ul>
-                    <li><a href="#">lorem</a></li>
-                    <li><a href="#">lorem</a></li>
-                    <li><a href="#">lorem</a></li>
-                    <li><a href="#">lorem</a></li>
-                </ul>
-            </div>
-            <div class="link">
-                <h3>lorem</h3>
-                <ul>
-                    <li><a href="#">lorem</a></li>
-                    <li><a href="#">lorem</a></li>
-                    <li><a href="#">lorem</a></li>
-                    <li><a href="#">lorem</a></li>
-                </ul>
-            </div>
-        </div>
+        </section>
     </footer>
+    <script>
+        function voltear(card){
+            card.querySelector('.card-container').classList.toggle('is-flipped')
+        }
+    </script>
 </body>
 </html>

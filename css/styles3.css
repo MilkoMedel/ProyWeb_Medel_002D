@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     width: auto;
@@ -6,27 +6,30 @@
     text-decoration: none;
     list-style: none;
 }
-
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
+body, html{
+    background-color: #AFEEEE;
 }
 
-.header{
+.container {
+    max-width: 3200px;
+    margin:auto;
+}
+
+.header {
     background-image: linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)),
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
         url(https://images.prismic.io/simpliroute/85eca361-d606-4cb9-9bb3-0bc359e09961_planograma+de+abarrotes.jpg?auto=compress%2Cformat&rect=0%2C121%2C1920%2C836&w=1920&fit=max&q=100);
     background-position: center bottom;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-size: cover;
     min-height: 10vh;
     display: flex;
     align-items: center;
 }
 
-.menu{
-    position: absolute;
+.menu {
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -35,68 +38,116 @@
     justify-content: space-between;
 }
 
-.logo{
-    color: #ffFdfc;
-    font-size: 25px;
+.menu-logo {
+    width: 80px;
 }
 
-.menu .navbar ul li{
+.menu .navbar ul li {
     position: relative;
     float: left;
+    text-transform: uppercase;
 }
 
-.menu .navbar ul li a{
+.menu .navbar ul li a {
     font-size: 10px;
     padding: 20px;
     color: #ffFdfc;
     display: block;
+    text-decoration: none;
+    font-size: 15px;
 }
 
-.menu .navbar ul li a:hover{    
+.menu .navbar ul li a:hover {
     color: #ce967b;
 }
 
-#menu{
+#menu {
     display: none;
 }
 
-.menu-icono{
-    width: 100px;
-    padding: 20px 20px;
+.menu-icono {
+    width: 50px;
+    padding: 0 10px;
 }
 
-.menu label{
+.menu label {
     cursor: pointer;
     display: none;
 }
 
-.header-content{
-    text-align: center;
-    margin-bottom: 15px;
+.card{
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    overflow: hidden;
 }
 
-.header-content h1{
-    font-size: 75px;
-    line-height: 80px;
-    color: #f9fafc;
-    margin-bottom: 35px;
+.card h1 p{
+    margin: 10%;
 }
 
-.header-content p{
-    font-size: 16px;
-    color: #c5cbc5;
-    padding: 0 250px;
-    margin-bottom: 25px;
+.card-container{
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: initial;
+    justify-items: auto;
 }
 
-.btn-1{
-    display: inline-block;
-    padding: 11px 35px;
-    background-color: #ce967b;
-    color: #f9fafc;
-    text-transform: uppercase;
+.footer{
+    padding: 15px 0;
+    background-color: #2a2a2a;
+    color: #fff;
 }
 
-.btn-1:hover{
-    background-color: #ebad8d; 
+.container-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer h3 {
+    font-size: 13px;
+    color: #FFE333;
+    margin-bottom:15px;
+
+}
+
+@media (max-width: 800px){
+    .menu{
+        padding: initial;
+    }
+    .menu label{
+        display: initial;
+    }
+    .menu .navbar{
+        position: absolute; 
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+        z-index: 1000; /* Ajuste del z-index para que esté encima del slider */
+    }
+    .menu .navbar ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .navbar {
+        display: initial;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .header {
+        min-height: 0vh;
+    }
+    .header-content {
+        padding: 100px 30px;
+    }
+    .header-content p {
+        padding: 0;
+    }
+    .producto{
+        padding: 100px 0;
+        position: relative;
+    }
 }

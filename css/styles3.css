@@ -138,6 +138,10 @@ body, html{
 
 }
 
+.derechos{
+    text-align: center;
+} 
+
 @media (max-width: 800px){
     .menu{
         padding: initial;

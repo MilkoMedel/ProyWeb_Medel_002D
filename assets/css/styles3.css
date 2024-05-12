@@ -7,7 +7,7 @@
     list-style: none;
 }
 body, html{
-    background-color: #AFEEEE;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
 }
 
 .container {
@@ -75,21 +75,38 @@ body, html{
     display: none;
 }
 
-.producto {
-    max-width: 700px; /* Ancho máximo del carrusel */
-    margin: 50px auto; /* Centrar horizontalmente */
-    padding: 20px; /* Añadir espacio alrededor del carrusel */
-    background-color: #fff; /* Color de fondo */
-    border-radius: 20px; /* Borde redondeado */
-    box-shadow: 0 10px 10px 0;
+.card {
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
-.carousel-item img {
-    max-width: 100%; /* Imágenes del carrusel ajustadas */
-    height: auto;
+.card {
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    width: 100%; /* Ajusta el ancho de la tarjeta */
+    max-width: 600px; /* Establece un ancho máximo para la tarjeta */
+    margin: 30px auto; /* Centra la tarjeta y añade un margen superior e inferior */
+    background-color: #323337; 
+    color: #ccc;
+    padding: 20px; /* Añade un espacio interno a la tarjeta */
 }
 
-.btn-1 {
+.card-v {
+    width: 516px; /* Ancho de la carta */
+    height: 300px; /* Alto de la carta */
+    margin: 30px; /*division de cada card en 30px*/
+    object-fit: cover;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit);
+    gap: 20px; /* Espacio entre las cartas */
+    justify-items: center; /* Alinea el contenido en el centro horizontalmente */
+    text-align: center;
+}
+
+.btn-1{
     display: inline-block;
     padding: 11px 35px;
     background-color: #ce967b;
@@ -98,11 +115,11 @@ body, html{
     text-decoration: none;
 }
 
-.btn-1:hover {
-    background-color: #ebad8d;
+.btn-1:hover{
+    background-color: #ebad8d; 
 }
 
-.footer {
+.footer{
     padding: 15px 0;
     background-color: #2a2a2a;
     color: #fff;
@@ -111,6 +128,7 @@ body, html{
 .container-content{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .footer h3 {
@@ -157,10 +175,27 @@ body, html{
     .header-content p {
         padding: 0;
     }
-    .producto{
-        display: flexbox;
-        justify-items: center;
-        max-width: 70%;
-        max-height: 20%;
+    .card-container{
+        max-width: auto;
+        max-height: auto;
     }
+    .card{
+        width: 300px;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-v{
+        max-width: 300px;
+        max-height: 250px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer {
+        max-width: auto;
+        max-height: auto;
+    }
+
 }

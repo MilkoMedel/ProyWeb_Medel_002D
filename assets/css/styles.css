@@ -76,7 +76,7 @@ body, html{
 }
 
 .producto {
-    max-width: 420px; /* Ancho máximo del carrusel */
+    max-width: 600px; /* Ancho máximo del carrusel */
     margin: 50px auto; /* Centrar horizontalmente */
     padding: 20px; /* Añadir espacio alrededor del carrusel */
     background-color: #323337; /* Color de fondo */

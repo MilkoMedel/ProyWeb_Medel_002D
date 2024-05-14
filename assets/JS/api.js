@@ -24,3 +24,23 @@ $(document).ready(function(evt){
         });
     });
 });
+
+// api valor del USD a CLP
+$(document).ready(function(){
+    $.getJSON('https://mindicador.cl/api', function(data) {
+        var dailyIndicators = data;
+        // Obtenemos el valor del dólar desde la respuesta de la API
+        var valorDolar = dailyIndicators.dolar.valor;
+        // Mostramos el valor del dólar en la consola para verificar
+        console.log('Valor del dólar:', valorDolar);
+        // Mostramos el resultado en el párrafo especificado
+        $("#valorDolar").html('El valor actual del dólar a peso chileno es: $' + valorDolar.toFixed(2));
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+        console.log('Error al consumir la API:', textStatus, errorThrown);
+    });
+});
+
+
+
+
+
